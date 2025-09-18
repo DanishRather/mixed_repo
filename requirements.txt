@@ -1,0 +1,14 @@
+
+# python==3.12.3
+
+# salesfroce dependencies
+requests==2.32.5
+
+# in case .env is used
+dotenv==0.9.9
+python-dotenv==1.1.1
+
+# for wheel and distribution files
+setuptools==80.9.0
+wheel==0.45.1
+twine==6.1.0
