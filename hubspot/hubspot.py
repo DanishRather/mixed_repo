@@ -6,6 +6,28 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 class HubSpotConnector:
+    """
+    A connector class to interact with the HubSpot API using OAuth 2.0 credentials.
+
+    This class provides methods to access HubSpot CRM objects such as contacts, 
+    manage authentication tokens, and make API requests.
+
+    Attributes:
+        client_id (str): HubSpot client ID used for OAuth authentication.
+        client_secret (str): HubSpot client secret used for OAuth authentication.
+        access_token (str): Access token for making API calls.
+        refresh_token (str): Refresh token used to renew the access token.
+        base_url (str): Base URL for HubSpot API endpoints.
+        contact_url (str): API path for managing contacts.
+
+    Example:
+        connector = HubSpotConnector(
+            client_id="your_client_id",
+            client_secret="your_client_secret",
+            access_token="your_access_token",
+            refresh_token="your_refresh_token"
+        )
+    """
     def __init__(self, client_id: str, client_secret: str, access_token: str, refresh_token: str):
         """
         Initialize HubSpot connector with OAuth credentials.
